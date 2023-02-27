@@ -1,12 +1,15 @@
 public class Invoice {
+    //declaring our attributes as private, to make changes outside the class in the future
     private String partNumber;
     private String partDescription;
     private int quantity;
     private int pricePerItem;
 
+    //creating class to print invoice in the future
     public Invoice(String partNumber, String partDescription, int quantity, int pricePerItem) {
         this.partNumber = partNumber;
         this.partDescription = partDescription;
+        //quantity and price  cannot be negative number, will check this with test and will add if-else loop
         if (quantity <= 0) {
             this.quantity = 0;
         } else {
@@ -18,7 +21,7 @@ public class Invoice {
             this.pricePerItem = pricePerItem;
         }
     }
-
+// setters and getters for our attributes
     public void setPartNumber(String partNumber) {
         this.partNumber = partNumber;
     }
